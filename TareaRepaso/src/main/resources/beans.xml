@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="primerEmail" class="demo.modelo.entidad.Email">
+		<property name="id" value="101"></property>
+		<property name="remintente" value="usuario1"></property>
+		<property name="destinatario" value="cliente1"></property>
+	</bean>
+	
+	<bean id="segundoEmail" class="demo.modelo.entidad.Email">
+		<property name="id" value="202"></property>
+		<property name="remintente" value="usuario2"></property>
+		<property name="destinatario" value="cliente2"></property>
+	</bean>
+	
+	<bean id="lovecraft" class="demo.modelo.entidad.Autor">
+		<property name="id" value="321"></property>
+		<property name="nombre" value="H.P. Lovecraft"></property>
+		<property name="edad" value="33"></property>
+	</bean>
+	
+	<bean id="libroFijo" class="demo.modelo.entidad.Libro">
+		<property name="isbn" value="163-49-8-456987-5"></property>
+		<property name="editorial" value="edelvives"></property>
+		<property name="autor" ref="lovecraft"></property>
+	</bean>
+	
+</beans>
